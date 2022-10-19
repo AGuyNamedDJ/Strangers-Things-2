@@ -4,7 +4,7 @@ import { createBrowerRouter } from "react-router";
 
 const router = createBrowerRouter([
     {
-        
+        path: "/"
     }
 ])
 
