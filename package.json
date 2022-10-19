@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/DJRobertson95/Strangers-Things-2/issues"
   },
-  "homepage": "https://github.com/DJRobertson95/Strangers-Things-2#readme",
+  "homepage": "/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
