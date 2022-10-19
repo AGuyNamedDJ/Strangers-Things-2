@@ -1,6 +1,6 @@
-import React from “react”;
+import React from "react";
 import ReactDom from "react-dom";
-import { createBrowerRouter } from "react-router";
+import { createBrowerRouter, RouterProvider } from "react-router";
 import Homepage from "./components/Homepage";
 
 const router = createBrowerRouter([
