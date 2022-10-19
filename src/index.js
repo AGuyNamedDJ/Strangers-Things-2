@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { createBrowerRouter, RouterProvider } from "react-router";
+import { createBrowerRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./components/Homepage";
 
 const router = createBrowerRouter([
@@ -18,4 +18,4 @@ const Homepage = () => {
     )
 };
 
-ReactDOM.render(<Homepage />, document.getElementById("app"));
+ReactDOM.render(<RouterProvider router={router} />, document.getElementById("app"));
