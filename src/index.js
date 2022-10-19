@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Homepage from "./components/Homepage";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Homepage from './components/Homepage';
 
 const router = createBrowserRouter([
     {
