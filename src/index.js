@@ -11,4 +11,5 @@ const router = createBrowserRouter([
     }
 ]);
 
+// Router Provider to pass the router
 ReactDOM.render(<RouterProvider router={router} />, document.getElementById("app"));
