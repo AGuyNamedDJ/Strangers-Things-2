@@ -7,6 +7,9 @@ import ErrorPage from './components/Utilites/ErrorPage';
 import AboutUs from './components/Webpages/AboutUs';
 import Listings from './components/Webpages/Listings';
 import LogIn from './components/Webpages/LogIn';
+import NewListing from './components/Webpages/NewListing';
+import Profile from './components/Webpages/Profile';
+import Register from './components/Webpages/Register';
 import Settings from './components/Utilites/Settings';
 
 const router = createBrowserRouter([
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <LogIn />
+            },
+            {
+                path: "/newlistings",
+                element: <NewListing />
+            },
+            {
+                path: "/profile",
+                element: <Profile />
+            },
+            {
+                path: "/register",
+                element: <Register />
             },
         ]
 
