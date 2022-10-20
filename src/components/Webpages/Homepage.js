@@ -34,6 +34,7 @@ const Homepage = () => {
             <p>A Proper Market For All!</p>
             <Navbar />
 
+            <h2>Welcome to Our Home Page!</h2>
             {/* Create section for each path */}
             <p>Content Shown Below</p>
             <Outlet context={pageReady}/>

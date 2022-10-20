@@ -11,7 +11,7 @@ const listings = () => {
 
                 {/* Mapping our Listings to the page */}
             {
-                pageReady.length ? pageReady.map((singleProduct,idx) => {
+                listingsData.length ? listingsData.map((singleProduct,idx) => {
                     return <div key={idx}>
                         <p>Product: {singleProduct.title}</p>
                         <p>Category: {singleProduct.category}</p>
