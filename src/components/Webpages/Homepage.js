@@ -69,6 +69,7 @@ const Homepage = () => {
             <p>A Proper Market For All!</p>
             <Navbar />
             <Outlet context={[pageReady, setPageReady]} />
+            <div>
                 {
                     listingsData[0].map((singleProduct, idx) => {
                     return <div key={idx}>
