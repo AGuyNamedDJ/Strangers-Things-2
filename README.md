@@ -84,3 +84,5 @@ The task is to build out a Craigslist-Lite, complete with users, posts, and mess
 Notes
 
 Morning Review 10/17 video 28 min
+
+rendering out the data = morning review 10/18 video 43:00
