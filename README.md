@@ -78,3 +78,9 @@ The task is to build out a Craigslist-Lite, complete with users, posts, and mess
 - All users should be able to:
   - Filter posts with a simple text matcher (no fetch call needed here)
 - Edit a post for which they are the author
+
+---
+
+Notes
+
+Morning Review 10/17 video 28 min
