@@ -86,3 +86,4 @@ Notes
 Morning Review 10/17 video 28 min
 
 rendering out the data = morning review 10/18 video 43:00
+// Check out Elles link for Delete CRUD
