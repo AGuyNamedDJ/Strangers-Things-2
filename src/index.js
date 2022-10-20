@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+// Import Pages
 import Homepage from './components/Webpages/Homepage';
 import ErrorPage from './components/Utilites/ErrorPage';
 import AboutUs from './components/Webpages/AboutUs';
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
                 element: <LogIn />
             },
             {
-                path: "/newlistings",
+                path: "/newlisting",
                 element: <NewListing />
             },
             {
