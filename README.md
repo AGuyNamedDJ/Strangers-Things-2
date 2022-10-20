@@ -6,6 +6,19 @@ We are going to be consuming another API, which is hosted at Stranger's Things A
 
 ---
 
+Goals
+
+- Posts View, unathenticated
+- Register/Login/Logout
+- Post Form
+- Post View, Upgraded w/ Authentication
+- Delete Buttpn
+- Messages Form
+- Load User Object on PAge Load
+- Search Form
+
+---
+
 Common Requirements
 
 - Javascript Basics
