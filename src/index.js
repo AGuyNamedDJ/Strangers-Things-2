@@ -5,11 +5,23 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Homepage from './components/Homepage';
 import ErrorPage from './components/ErrorPage';
+import LogIn from './components/LogIn';
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Homepage />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "/settings",
+                element: <Settings />
+            },
+            {
+                path: "/login",
+                element: <LogIn />
+            },
+        ]
     }
 ]);
 

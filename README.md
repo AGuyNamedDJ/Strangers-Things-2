@@ -14,7 +14,7 @@ Goals
 - Post View, Upgraded w/ Authentication
 - Delete Buttpn
 - Messages Form
-- Load User Object on PAge Load
+- Load User Object on Page Load
 - Search Form
 
 ---
