@@ -35,9 +35,9 @@ const Register = () => {
         }
     }
 
-    // Step 5b- callback fn
+    // Step 5b - callback fn
     function updateUsernameState(event) {
-        console.log("This is the event target", event.target.value)
+        console.log("This is the event target: ", event.target.value)
     }
 
     return (
@@ -50,10 +50,12 @@ const Register = () => {
             {/* Now lets connect text to .js - Step 5 */}
 
                 <label> Enter New Username </label>
-                <input type="text" value={username}></input>
+
+                {/* Step 5c - event listener to attach the inputs */}
+                <input type="text" value={username} onChange={(updateUsernameState) => console.log(event.target.value)} ></input>
                     {/* this updates the entered state (new state) to reflect - 5a */}
 
-                <br/>
+                <br/> 
                 <br/>
 
                 <label> Enter New Password </label>
