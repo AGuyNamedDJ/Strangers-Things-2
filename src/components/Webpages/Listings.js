@@ -25,10 +25,8 @@ const listings = () => {
         </div>
     )
 
-}
+;}
 
 export default listings;
 
-
-// Map thorugh on line 10
-// make a page for listings on the webpage
+// Page Completed
