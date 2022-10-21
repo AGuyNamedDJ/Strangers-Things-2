@@ -1,5 +1,5 @@
-import React from "react";
-import { ReactDOM } from "react";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
 // URL to make template literal
     // I could just save this in an API folder & import it everytime, i'll get to it eventually
@@ -7,10 +7,12 @@ const apiBaseURL = "https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-f
 
 const Register = () => {
     // Lets make state for the submission
-    const [username, setUsername] = userState("");
-    const [password, setPassword] = userState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
-    async function formSubmitHandeler () {
+    async function formSubmitHandeler (event) {
+        event.preventDefault
+            // The parameter will not refresh the page, but run the code
         try {
             // We want /users/register
             fetch(`${apiBaseURL}/users/register`, {
