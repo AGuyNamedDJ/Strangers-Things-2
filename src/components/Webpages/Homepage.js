@@ -13,60 +13,40 @@ const Homepage = () => {
 
     // Fetching Post; Step 2a
     useEffect(() => {
-        async function fetchStrangersThingsData() {
+        async function fetchStrangersData() {
             try {
                 const response = await fetch(`${apiBaseURL}/posts`);
                 console.log("The Response Works", response)
 
                 // Convert promise response into JSON - 2b
-                const data = await response.json();
-                console.log("Here is converted json data", data);
+                const results = await response.json();
+                console.log("Here is the translated json", results);
 
                 // Save data from response promise & update state - 2c
-                setPosts(data.results);
+                setPosts(results.data.posts);
             } catch (error) {
                 console.log(error);
             }
-        };
-        fetchStrangersThingsData();
-    }, [])
-        // This means to only fire this data once, not infinite loop
+        }
+        fetchStrangersData();
 
-        // Step 3
+    }, [])
+
     return (
         <div>
-            <p>Displaying API Data</p>
-            {/* <div>
-                {
-                    posts.map((indivPosts, idx) => {
-                        console.log(indivPosts)
-                        return <div key={idx}>
-                            <p>Listing: {indivPosts.title}</p>
-                            <p>Category: {indivPosts.category}</p>
-                            <p>Price: {indivPosts.price}</p>
-                        </div>
-                    })
-                }
-            </div> */}
+            <div id="header">
+                <h1 id="title">Stranger's Things</h1>
+                <Navbar />
+            </div>
+
+            {/* Page Content */}
+            <Outlet context={posts}/>
+
         </div>
+
     )
-};
+}
 
 export default Homepage;
 
-// Original
-// return (
-//     <div>
-//         <div>
-//         <h1>Stranger's Things</h1>
-//         <h3>A Proper Market For All!</h3>
-//         <Navbar />
-//         </div>
-
-//         {/* Create section for each path */}
-//         <p>All content from the API should be showing here</p>
-//         <Outlet context={posts}/>
-
-//     </div>
-// )
-// };
+// Page Complete

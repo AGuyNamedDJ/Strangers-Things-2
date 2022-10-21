@@ -1,26 +1,31 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
+import { Link } from "react-router-dom"; 
+
+
+import ListingFormat from "../Utilites/ListingFormat";
 
 const listings = () => {
-    const listingsData = useOutletContext();
+    const postsData = useOutletContext();
+    console.log("This is our postsData: ", postsData);
 
     return (
         <div>
-            <p>These are All of Our Listings; change wording later</p>
+            <div className="posts-header">
+                <h1>Posts</h1>
+                <p>Search Posts</p>
+                <button><Link to="/posts/add">New Post</Link></button>
+            </div>
 
-                {/* Mapping our Listings to the page */}
             {
-                listingsData.length ? listingsData[0].map((singleProduct, idx) => {
-                    return <div key={idx}>
-                        <p>Listing: {singleProduct.title}</p>
-                        <p>Category: {singleProduct.category}</p>
-                        <p>Price: {singleProduct.price}</p>
-                    </div>
-                }) : <div>No Listings Avaliable </div>
+                postsData.length ? postsData.map((post, idx) => {
+                    return <ListingFormat key={idx} post={post}/>
+                }) : <p>No posts to display</p>
             }
         </div>
     )
-}; 
+
+}
 
 export default listings;
 
