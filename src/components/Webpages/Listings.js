@@ -20,7 +20,7 @@ const listings = () => {
             {
                 postsData.length ? postsData.map((post, idx) => {
                     return <ListingFormat key={idx} post={post}/>
-                }) : <p>No posts to display</p>
+                }) : <p>No Listings Available</p>
             }
         </div>
     )
