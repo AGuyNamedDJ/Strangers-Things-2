@@ -6,7 +6,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Homepage from './components/Webpages/Homepage';
 import ErrorPage from './components/Utilites/ErrorPage';
 import AboutUs from './components/Webpages/AboutUs';
+import EditListing from './components/Webpages/EditListing';
+// Check if i need a homepage content
 import Listings from './components/Webpages/Listings';
+import ListingsView from './components/Webpages/ListingsView';
 import LogIn from './components/Webpages/LogIn';
 import NewListing from './components/Webpages/NewListing';
 import Profile from './components/Webpages/Profile';
@@ -19,6 +22,11 @@ const router = createBrowserRouter([
         element: <Homepage />,
         errorElement: <ErrorPage />,
         children: [
+            // Check & see if i need this
+            // {
+            //     index: true,
+            //     element: <Homepage />
+            // },
             {
                 path: "/settings",
                 element: <Settings />
@@ -28,8 +36,27 @@ const router = createBrowserRouter([
                 element: <AboutUs />
             },
             {
+                path: "/editlisting",
+                element: <EditListing />
+            },
+            // check if i want this page /home for homepage content
+            {
+                path: "/home",
+                element: <LogIn />
+            },
+            {
                 path: "/listings",
                 element: <Listings />
+                    // may need children element here
+                    // children: [
+                    //     {
+                    //         example
+                    //     }
+                    // ]
+            },
+            {
+                path: "/listingsview",
+                element: <ListingsView />
             },
             {
                 path: "/login",
@@ -43,6 +70,11 @@ const router = createBrowserRouter([
                 path: "/profile",
                 element: <Profile />
             },
+            // Check if I need profile id to log in, there a lecture on this
+            // {
+            //     path: "/profile/:id",
+            //     element: <ListingsView />
+            // },
             {
                 path: "/register",
                 element: <Register />
