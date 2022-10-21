@@ -10,13 +10,13 @@ const listings = () => {
 
                 {/* Mapping our Listings to the page */}
             {
-                listingsData[0].map((singleProduct, idx) => {
+                listingsData.length ? listingsData[0].map((singleProduct, idx) => {
                     return <div key={idx}>
                         <p>Listing: {singleProduct.title}</p>
                         <p>Category: {singleProduct.category}</p>
                         <p>Price: {singleProduct.price}</p>
                     </div>
-                })
+                }) : <div>No Listings Avaliable </div>
             }
         </div>
     )
