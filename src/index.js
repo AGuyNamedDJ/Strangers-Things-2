@@ -15,6 +15,7 @@ import NewListing from './components/Webpages/NewListing';
 import Profile from './components/Webpages/Profile';
 import Register from './components/Webpages/Register';
 import Settings from './components/Utilites/Settings';
+import HomepageContent from './components/Webpages/HomepageContent';
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: "/home",
                 element: <LogIn />
+            },
+            {
+                path: "/homepage",
+                element: <HomepageContent />
             },
             {
                 path: "/listings",
