@@ -91,3 +91,4 @@ rendering out the data = morning review 10/18 video 43:00
 - go back & check out components / utilies files
 - Check craigslist to get an ideal of comparison
 - make detailed post preview 4.js
+- check out . filter for sorting post or use a tenary
