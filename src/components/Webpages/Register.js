@@ -14,14 +14,14 @@ const Register = () => {
         event.preventDefault
             // The parameter will not refresh the page, but run the code
         try {
-            // We want /users/register
+            // We want /users/register - 3a
             fetch(`${apiBaseURL}/users/register`, {
                 method: "POST",
-                    // All request (POST request) are made in all caps
+                    // All request (POST request) are made in all caps - 3b
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                // Data we are passing in & this will translate it to be readable
+                // Data we are passing in & this will translate it to be readable -3c
                 body: JSON.stringify({
                     user: {
                         // Pass in variables from the state
@@ -30,6 +30,16 @@ const Register = () => {
                     }
                 })
             })
+
+            // Step -3d; translate promise response to json
+            const data = await response.json();
+            console.log("Translated json data", data)
+
+            // Step -3E Local storage; Saving info on the client browser
+                // local.Storage.setItem() - it takes 2 arguments: 'key' & 'the value of that key'
+            // Here we are saving the token
+            localStorage.setItem("token", data.data.token)
+
         } catch (error) {
             console.log(error);
         }
@@ -59,14 +69,14 @@ const Register = () => {
                 <label> Enter New Username </label>
 
                 {/* Step 5c - event listener to attach the inputs */}
-                <input type="text" value={username} onChange={(updateUsernameState) => console.log(event.target.value)} ></input>
+                <input type="text" value={username} onChange={updateUsernameState}></input>
                     {/* this updates the entered state (new state) to reflect - 5a */}
 
                 <br/> 
                 <br/>
 
                 <label> Enter New Password </label>
-                <input type="text" value={password} onChange={(updatePasswordState) => console.log(event.target.value)}></input>
+                <input type="text" value={password} onChange={updatePasswordState}></input>
 
                 <br/>
                 <br/>
