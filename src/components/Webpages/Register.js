@@ -35,19 +35,29 @@ const Register = () => {
         }
     }
 
+    // Step 5b- callback fn
+    function updateUsernameState(event) {
+        console.log("This is the event target", event.target.value)
+    }
+
     return (
         <div>
-            {/* Now we need to attach a callback fn to the form ele */}
-            <form>
+            {/* Now we need to attach a callback fn to the form ele - Step 4*/}
+            <form onSubmit={formSubmitHandeler}>
+                {/* no refresh */}
             <br/>
+
+            {/* Now lets connect text to .js - Step 5 */}
+
                 <label> Enter New Username </label>
-                <input type="text"></input>
+                <input type="text" value={username}></input>
+                    {/* this updates the entered state (new state) to reflect - 5a */}
 
                 <br/>
                 <br/>
 
                 <label> Enter New Password </label>
-                <input type="text"></input>
+                <input type="text" value={password}></input>
 
                 <br/>
                 <br/>
