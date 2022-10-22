@@ -1,6 +1,7 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom"; 
 
+// Copied from listing format doc
 const ProfileListingFormat = (props) => {
     const postData = props;
     // console.log("Here is each Listing: ", postData);
@@ -17,3 +18,5 @@ const ProfileListingFormat = (props) => {
 };
 
 export default ProfileListingFormat; 
+
+// Page complete
