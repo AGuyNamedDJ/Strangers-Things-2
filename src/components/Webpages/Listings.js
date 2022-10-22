@@ -2,10 +2,9 @@ import React from "react";
 import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom"; 
 
+import ListingFormat from "../Unauthorized/ListingFormat";
 
-import ListingFormat from "../Utilites/ListingFormat";
-
-const listings = () => {
+const Listings = () => {
     const postsData = useOutletContext();
     console.log("This is our postsData: ", postsData);
 
@@ -27,6 +26,6 @@ const listings = () => {
 
 ;}
 
-export default listings;
+export default Listings;
 
 // Page Completed

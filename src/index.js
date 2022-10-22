@@ -3,21 +3,23 @@ import ReactDOM from 'react-dom';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Import Pages
-import Homepage from './components/Webpages/Homepage';
+import EditListing from './components/Authorized/EditListing';
+import NewListing from './components/Authorized/NewListing';
+import Profile from './components/Authorized/Profile';
+import ProfileListingFormat from './components/Authorized/ProfileListingFormat';
+
+import ListingFormat from './components/Unauthorized/ListingFormat';
+import LogIn from './components/Unauthorized/LogIn';
+import Register from './components/Unauthorized/Register';
+
 import ErrorPage from './components/Utilites/ErrorPage';
-import AboutUs from './components/Webpages/AboutUs';
-import EditListing from './components/Webpages/EditListing';
-// import Index from './utilities/Index';
-// Check if i need a homepage content
-import Listings from './components/Webpages/Listings';
-import ListingFormat from './components/Utilites/ListingFormat';
-import LogIn from './components/Webpages/LogIn';
-import NewListing from './components/Webpages/NewListing';
-import Profile from './components/Webpages/Profile';
-import ProfileListingFormat from './components/Utilites/ProfileListingFormat';
-import Register from './components/Webpages/Register';
+import Navbar from './components/Utilites/Navbar';
 import Settings from './components/Utilites/Settings';
+
+import AboutUs from './components/Webpages/AboutUs';
+import Homepage from './components/Webpages/Homepage';
 import HomepageContent from './components/Webpages/HomepageContent';
+import Listings from './components/Webpages/Listings';
 
 const router = createBrowserRouter([
     {
