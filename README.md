@@ -12,7 +12,7 @@ Goals
 - Register/Login/Logout
 - Post Form
 - Post View, Upgraded w/ Authentication
-- Delete Buttpn
+- Delete Button
 - Messages Form
 - Load User Object on Page Load
 - Search Form
