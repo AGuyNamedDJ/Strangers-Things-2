@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
     // I could just save this in an API folder & import it everytime, i'll get to it eventually
 const apiBaseURL = "https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft";
 
-const Register = () => {
+const Register = (props) => {
     // Lets make state for the submission
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -20,7 +20,7 @@ const Register = () => {
                 method: "POST",
                     // All request (POST request) are made in all caps - 3b
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 },
                 // Data we are passing in & this will translate it to be readable -3c
                 body: JSON.stringify({
@@ -61,6 +61,7 @@ const Register = () => {
 
     return (
         <div>
+            <h3>Resgister For Account</h3>
             {/* Now we need to attach a callback fn to the form ele - Step 4*/}
             <form onSubmit={formSubmitHandeler}>
                 {/* no refresh */}

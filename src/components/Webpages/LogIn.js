@@ -49,8 +49,9 @@ const Login = () => {
     // Same data from register form
     return (
         <div>
+            <h3>Account Log In</h3>
             {/* Now we need to attach a callback fn to the form ele - Step 4*/}
-            <form onSubmit={formSubmitHandeler}>
+            <form onSubmit={formSubmitHandler}>
                 {/* no refresh */}
             <br/>
 

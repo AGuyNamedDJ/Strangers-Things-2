@@ -7,12 +7,14 @@ import Homepage from './components/Webpages/Homepage';
 import ErrorPage from './components/Utilites/ErrorPage';
 import AboutUs from './components/Webpages/AboutUs';
 import EditListing from './components/Webpages/EditListing';
+// import Index from './utilities/Index';
 // Check if i need a homepage content
 import Listings from './components/Webpages/Listings';
-import ListingsView from './components/Webpages/ListingsView';
+import ListingFormat from './components/Utilites/ListingFormat';
 import LogIn from './components/Webpages/LogIn';
 import NewListing from './components/Webpages/NewListing';
 import Profile from './components/Webpages/Profile';
+import ProfileListingFormat from './components/Utilites/ProfileListingFormat';
 import Register from './components/Webpages/Register';
 import Settings from './components/Utilites/Settings';
 import HomepageContent from './components/Webpages/HomepageContent';
@@ -60,8 +62,8 @@ const router = createBrowserRouter([
                     // ]
             },
             {
-                path: "/listingsview",
-                element: <ListingsView />
+                path: "/listingformat",
+                element: <ListingFormat />
             },
             {
                 path: "/login",
@@ -80,6 +82,10 @@ const router = createBrowserRouter([
             //     path: "/profile/:id",
             //     element: <ListingsView />
             // },
+            {
+                path: "/profilelistingformat",
+                element: <ProfileListingFormat />
+            },
             {
                 path: "/register",
                 element: <Register />
