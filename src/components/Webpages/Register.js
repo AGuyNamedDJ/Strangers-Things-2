@@ -89,3 +89,5 @@ const Register = () => {
 };
 
 export default Register;
+
+// Page complete
