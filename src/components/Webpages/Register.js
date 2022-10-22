@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { useNavigate } from "react-router-dom";
 
 // URL to make template literal
     // I could just save this in an API folder & import it everytime, i'll get to it eventually
@@ -15,7 +16,7 @@ const Register = () => {
             // The parameter will not refresh the page, but run the code
         try {
             // We want /users/register - 3a
-            const response = fetch(`${apiBaseURL}/users/register`, {
+            const response = await fetch(`${apiBaseURL}/users/register`, {
                 method: "POST",
                     // All request (POST request) are made in all caps - 3b
                 headers: {
@@ -48,13 +49,13 @@ const Register = () => {
 // Step 5b - callback fn
     // Username State
     function updateUsernameState(event) {
-        console.log("This is the event target: ", event.target.value)
+        // console.log("This is the event target: ", event.target.value)
         setUsername(event.target.value)
     }
 
     // Username Password
     function updatePasswordState(event) {
-        console.log("This is the event target: ", event.target.value)
+        // console.log("This is the event target: ", event.target.value)
         setPassword(event.target.value)
     }
 
@@ -76,7 +77,7 @@ const Register = () => {
                 <br/>
 
                 <label> Enter New Password </label>
-                <input type="text" value={password} onChange={updatePasswordState}></input>
+                <input type="password" value={password} onChange={updatePasswordState}></input>
 
                 <br/>
                 <br/>

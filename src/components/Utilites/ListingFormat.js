@@ -5,7 +5,7 @@ const ListingFormat = (props) => {
     const postData = props;
 
     // Are we grabbing the post?
-    console.log("Here is each Listing: ", postData);
+    // console.log("Here is each Listing: ", postData);
 
     return (
         <div className="listing-format">
