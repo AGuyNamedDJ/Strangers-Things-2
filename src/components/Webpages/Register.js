@@ -15,7 +15,7 @@ const Register = () => {
             // The parameter will not refresh the page, but run the code
         try {
             // We want /users/register - 3a
-            fetch(`${apiBaseURL}/users/register`, {
+            const response = fetch(`${apiBaseURL}/users/register`, {
                 method: "POST",
                     // All request (POST request) are made in all caps - 3b
                 headers: {
