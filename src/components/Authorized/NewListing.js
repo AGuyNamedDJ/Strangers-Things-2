@@ -45,11 +45,10 @@ const NewListing = () => {
             setDescription("")
             setPrice("")
             setLocation("")
-            console.log("This is the data: ", data)
+            console.log("Here's the translated data: ", data)
     
             setListing([...posts, data.data.post])
     
-            
             } catch (error) {
                 console.log(error);
             }

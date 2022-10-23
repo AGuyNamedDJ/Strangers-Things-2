@@ -92,3 +92,5 @@ rendering out the data = morning review 10/18 video 43:00
 - Check craigslist to get an ideal of comparison
 - make detailed post preview 4.js
 - check out . filter for sorting post or use a tenary
+- make sure to check id's on every page
+  - then do css
