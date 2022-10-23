@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { useNavigate } from "react-router-dom";
 
 // URL to make template literal
     // I could just save this in an API folder & import it everytime, i'll get to it eventually
 const apiBaseURL = "https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft";
 
-const Register = (props) => {
+const Register = () => {
     // Lets make state for the submission
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -61,7 +60,7 @@ const Register = (props) => {
 
     return (
         <div>
-            <h3>Resgister For Account</h3>
+            <h3>Register For Account</h3>
             {/* Now we need to attach a callback fn to the form ele - Step 4*/}
             <form onSubmit={formSubmitHandeler}>
                 {/* no refresh */}
@@ -90,5 +89,4 @@ const Register = (props) => {
 };
 
 export default Register;
-
 // Page complete

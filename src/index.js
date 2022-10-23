@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Import Pages
 import EditListing from './components/Authorized/EditListing';
+import LogOut from './components/Authorized/LogOut';
 import NewListing from './components/Authorized/NewListing';
 import Profile from './components/Authorized/Profile';
 import ProfileListingFormat from './components/Authorized/ProfileListingFormat';
@@ -11,6 +12,7 @@ import ProfileListingFormat from './components/Authorized/ProfileListingFormat';
 import ListingFormat from './components/Unauthorized/ListingFormat';
 import LogIn from './components/Unauthorized/LogIn';
 import Register from './components/Unauthorized/Register';
+import SearchListings from './components/Unauthorized/SearchListings';
 
 import ErrorPage from './components/Utilites/ErrorPage';
 import Navbar from './components/Utilites/Navbar';
@@ -44,10 +46,13 @@ const router = createBrowserRouter([
                 path: "/editlisting",
                 element: <EditListing />
             },
-            // check if i want this page /home for homepage content
             {
-                path: "/home",
+                path: "/login",
                 element: <LogIn />
+            },
+            {
+                path: "/logout",
+                element: <LogOut />
             },
             {
                 path: "/homepage",
@@ -91,6 +96,10 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register />
+            },
+            {
+                path: "/searchlistings",
+                element: <SearchListings />
             },
         ]
 

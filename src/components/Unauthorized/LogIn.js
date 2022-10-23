@@ -56,7 +56,7 @@ const Login = () => {
             <br/>
 
             {/* Now lets connect text to .js - Step 5 */}
-                <label> Enter New Username </label>
+                <label> Enter Username </label>
 
                 {/* Step 5c - event listener to attach the inputs */}
                 <input type="text" value={username} onChange={updateUsernameState}></input>
@@ -65,7 +65,7 @@ const Login = () => {
                 <br/> 
                 <br/>
 
-                <label> Enter New Password </label>
+                <label> Enter Password </label>
                 <input type="password" value={password} onChange={updatePasswordState}></input>
 
                 <br/>
