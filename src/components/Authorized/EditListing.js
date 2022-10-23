@@ -48,7 +48,7 @@ const EditListing = (props) => {
     }
 
     return (
-        <form id="editlisting" onSubmit={formSubmit}>
+        <form id="edit-listing" onSubmit={formSubmit}>
             <label>Title</label>
             <input type="text"  value={title} onChange={changeInput}></input>
             <button type="submit">Update</button>

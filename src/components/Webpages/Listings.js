@@ -10,7 +10,7 @@ const Listings = () => {
 
     return (
         <div>
-            <div className="posts-header">
+            <div id="posts-header">
                 <h1>Posts</h1>
                 <p>Search Posts</p>
                 <button><Link to="/posts/add">New Post</Link></button>
