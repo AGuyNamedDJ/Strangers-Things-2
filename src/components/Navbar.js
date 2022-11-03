@@ -2,20 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
     // Link only changes URL bar, doesn't hard refresh
 
-const Navbar = () => {
+const Navbar = (props) => {
+
     return (
         <nav id="navbar">
-            <Link to="/">Home </Link>
-            {/* <Link to="aboutus">About </Link> */}
-            <Link to="login">Log In </Link>
-            <Link to="listings">Listings </Link>
-            {/* <Link to="newlisting">New Listing </Link> */}
-            {/* <Link to="profile">My Profile </Link> */}
-            <Link to="register">Register </Link>
-            {/* <Link to="settings">Settings </Link> */}
+            <Link to="/">Home</Link>
 
+            <Link to="posts">Posts</Link>
+
+            <Link to="profile">Profile</Link>
+
+            {
+                props.loggedIn ? <Link to="profile/logout">Logout</Link> : <Link to="profile">Login</Link>
+            }
         </nav>
     )
 };
 
-export default Navbar;
+export default Navbar; 
+
+// Done

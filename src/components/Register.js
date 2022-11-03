@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // URL to make template literal
     // I could just save this in an API folder & import it everytime, i'll get to it eventually
@@ -89,4 +89,5 @@ const Register = () => {
 };
 
 export default Register;
+
 // Page complete

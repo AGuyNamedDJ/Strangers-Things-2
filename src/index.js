@@ -4,22 +4,22 @@ import {createRoot} from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Import Pages
-import EditListing from './components/EditListing';
+import EditPosts from './components/EditPosts';
 import LogOut from './components/LogOut';
-import NewListing from './components/NewListing';
+import NewPosts from './components/NewPosts'
 import Profile from './components/Profile';
-import ProfileListingFormat from './components/ProfileListingFormat';
-import ListingFormat from './components/ListingFormat';
+import ProfilePostsFormat from './components/ProfilePostsFormat'
+import PostsFormat from './components/PostsFormat'
 import LogIn from './components/LogIn';
 import Register from './components/Register';
-import SearchListings from './components/SearchListings';
+import SearchPosts from './components/SearchPosts'
 import ErrorPage from './components/ErrorPage';
 import Navbar from './components/Navbar';
 import Settings from './components/Settings';
 import AboutUs from './components/AboutUs';
 import Homepage from './components/Homepage';
 import HomepageContent from './components/HomepageContent';
-import Listings from './components/Listings';
+import Posts from './components/Posts';
 
 const router = createBrowserRouter([
     {
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
                 element: <AboutUs />
             },
             {
-                path: "/editlisting",
-                element: <EditListing />
+                path: "/editposts",
+                element: <EditPosts />
             },
             {
                 path: "/login",
@@ -52,36 +52,36 @@ const router = createBrowserRouter([
                 element: <HomepageContent />
             },
             {
-                path: "/listings",
-                element: <Listings />
+                path: "/posts",
+                element: <Posts />
             },
             {
-                path: "/listingformat",
-                element: <ListingFormat />
+                path: "/postsformat",
+                element: <PostsFormat />
             },
             {
                 path: "/login",
                 element: <LogIn />
             },
             {
-                path: "/newlisting",
-                element: <NewListing />
+                path: "/newposts",
+                element: <NewPosts />
             },
             {
                 path: "/profile",
                 element: <Profile />
             },
             {
-                path: "/profilelistingformat",
-                element: <ProfileListingFormat />
+                path: "/profilepostsformat",
+                element: <ProfilePostsFormat />
             },
             {
                 path: "/register",
                 element: <Register />
             },
             {
-                path: "/searchlistings",
-                element: <SearchListings />
+                path: "/searchPosts",
+                element: <SearchPosts />
             },
         ]
 
