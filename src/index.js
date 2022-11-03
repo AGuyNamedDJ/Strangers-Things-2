@@ -9,16 +9,13 @@ import LogOut from './components/LogOut';
 import NewListing from './components/NewListing';
 import Profile from './components/Profile';
 import ProfileListingFormat from './components/ProfileListingFormat';
-
 import ListingFormat from './components/ListingFormat';
 import LogIn from './components/LogIn';
 import Register from './components/Register';
 import SearchListings from './components/SearchListings';
-
 import ErrorPage from './components/ErrorPage';
 import Navbar from './components/Navbar';
 import Settings from './components/Settings';
-
 import AboutUs from './components/AboutUs';
 import Homepage from './components/Homepage';
 import HomepageContent from './components/HomepageContent';
@@ -30,11 +27,6 @@ const router = createBrowserRouter([
         element: <Homepage />,
         errorElement: <ErrorPage />,
         children: [
-            // Check & see if i need this
-            // {
-            //     index: true,
-            //     element: <Homepage />
-            // },
             {
                 path: "/settings",
                 element: <Settings />
@@ -62,12 +54,6 @@ const router = createBrowserRouter([
             {
                 path: "/listings",
                 element: <Listings />
-                    // may need children element here
-                    // children: [
-                    //     {
-                    //         example
-                    //     }
-                    // ]
             },
             {
                 path: "/listingformat",
@@ -85,11 +71,6 @@ const router = createBrowserRouter([
                 path: "/profile",
                 element: <Profile />
             },
-            // Check if I need profile id to log in, there a lecture on this
-            // {
-            //     path: "/profile/:id",
-            //     element: <ListingsView />
-            // },
             {
                 path: "/profilelistingformat",
                 element: <ProfileListingFormat />

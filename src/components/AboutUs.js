@@ -9,3 +9,5 @@ import React from "react";
  };
 
  export default AboutUs;
+
+ // Decide if i want this page
