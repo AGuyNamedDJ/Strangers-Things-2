@@ -1,6 +1,6 @@
-body {
-    /* background: #7D5C43;
-        Sienna */
-    background: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
+/* Global Scope */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 10px;
+        /* Set indention from top of page */
