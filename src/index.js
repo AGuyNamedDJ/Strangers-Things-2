@@ -1,27 +1,28 @@
 import React, {useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Import Pages
-import EditListing from './components/Authorized/EditListing';
-import LogOut from './components/Authorized/LogOut';
-import NewListing from './components/Authorized/NewListing';
-import Profile from './components/Authorized/Profile';
-import ProfileListingFormat from './components/Authorized/ProfileListingFormat';
+import EditListing from './components/EditListing';
+import LogOut from './components/LogOut';
+import NewListing from './components/NewListing';
+import Profile from './components/Profile';
+import ProfileListingFormat from './components/ProfileListingFormat';
 
-import ListingFormat from './components/Unauthorized/ListingFormat';
-import LogIn from './components/Unauthorized/LogIn';
-import Register from './components/Unauthorized/Register';
-import SearchListings from './components/Unauthorized/SearchListings';
+import ListingFormat from './components/ListingFormat';
+import LogIn from './components/LogIn';
+import Register from './components/Register';
+import SearchListings from './components/SearchListings';
 
-import ErrorPage from './components/Utilites/ErrorPage';
-import Navbar from './components/Utilites/Navbar';
-import Settings from './components/Utilites/Settings';
+import ErrorPage from './components/ErrorPage';
+import Navbar from './components/Navbar';
+import Settings from './components/Settings';
 
-import AboutUs from './components/Webpages/AboutUs';
-import Homepage from './components/Webpages/Homepage';
-import HomepageContent from './components/Webpages/HomepageContent';
-import Listings from './components/Webpages/Listings';
+import AboutUs from './components/AboutUs';
+import Homepage from './components/Homepage';
+import HomepageContent from './components/HomepageContent';
+import Listings from './components/Listings';
 
 const router = createBrowserRouter([
     {

@@ -1,9 +1,23 @@
-* {
-    border: 1px solid red;
-    background-color: blue;
-    color: brown;
+body {
+    background-color: grey;
 }
 
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 250px;
+    padding: 10px 25px;
+    border: 2px solid lavender;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #D1D1EA;
+}
+
+.navbar {
+    background-color: grey;
+    display: flex;
+}
+/* 
 .edit-listing {
 
 }
@@ -25,5 +39,4 @@
 }
 .title {
     
-}
-/* .navbar */
+} */
