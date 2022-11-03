@@ -17,7 +17,7 @@ const PostsFormat = (props) => {
             <p><strong>Location: </strong>{postData.post.location}</p>
             <p><strong>Seller: </strong>{postData.post.author.username}</p>
 
-            <div className="button-container">
+            <div id="button-container">
                 <button id="reply-btn"><Link to={`/posts/${postData.post._id}`}>Reply</Link></button>
             </div>
         </div>

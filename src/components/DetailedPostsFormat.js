@@ -78,7 +78,7 @@ const DetailedPostFormat = () => {
                 {
                     detailedPost.title ?
                     <div>
-                        <div className="detailed-post">
+                        <div id="detailed-post">
                             <h2>{detailedPost.title}</h2>
                             <p>{detailedPost.description}</p>
                             <h4>Location: {detailedPost.location}</h4>
@@ -87,18 +87,18 @@ const DetailedPostFormat = () => {
                             
                             { loggedIn ?
                                 ( detailedPost.author._id == profileData._id ? 
-                                    <div className="button-container">
-                                        <button className="edit-button" onClick={handleToggleEditForm}>EDIT</button>
-                                        <button className="delete-button" onClick={deletePost}>DELETE</button>
+                                    <div id="button-container">
+                                        <button id="edit-button" onClick={handleToggleEditForm}>EDIT</button>
+                                        <button id="delete-button" onClick={deletePost}>DELETE</button>
                                     </div>
                                 :
-                                    <div className="button-container">
-                                        <button className="send-msg-btn" onClick={handleToggleMessageForm}>Message</button>
+                                    <div id="button-container">
+                                        <button id="send-msg-btn" onClick={handleToggleMessageForm}>Message</button>
                                     </div>
                                 )
                             : 
-                            <div className="button-container">
-                                <button className="send-msg-btn" onClick={() => navigate("/profile")}>Login to message</button>
+                            <div id="button-container">
+                                <button id="send-msg-btn" onClick={() => navigate("/profile")}>Login to message</button>
                             </div>
                             }
                         </div>

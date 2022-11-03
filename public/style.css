@@ -9,7 +9,16 @@
 body {
     /* background: #7D5C43;
         Sienna */
-    background: white;
+    background: tan;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-container {
+    display: flex;
+    justify-content: right;
+}
+
+.centered {
+    text-align: center;
 }
 

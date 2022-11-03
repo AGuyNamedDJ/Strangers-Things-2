@@ -9,17 +9,17 @@ const Index = () => {
     return (
         <div id="centered">
             <h1>Welcome Back</h1>
-            <h1 className="big title">Login Below</h1>
+            <h1 id="big title">Login Below</h1>
 
             {
                 loggedIn ? 
                 <div>
                     <h2>Logging as {profileData.username}</h2>
-                    <button onClick={() => navigate("/profile")} className="edit-button">View Profile</button>
+                    <button onClick={() => navigate("/profile")} id="edit-button">View Profile</button>
                 </div>
                 : 
                 <div>
-                    <button onClick={() => navigate("/profile")} className="edit-button">Login</button>
+                    <button onClick={() => navigate("/profile")} id="edit-button">Login</button>
                 </div>
             }
         </div>
