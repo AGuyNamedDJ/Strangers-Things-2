@@ -6,11 +6,11 @@ const Navbar = (props) => {
 
     return (
         <nav id="navbar">
-            <Link to="/">Home</Link>
+            <Link to="/">Home </Link>
 
-            <Link to="posts">Posts</Link>
+            <Link to="posts">Posts </Link>
 
-            <Link to="profile">Profile</Link>
+            <Link to="profile">Profile </Link>
 
             {
                 props.loggedIn ? <Link to="profile/logout">Logout</Link> : <Link to="profile">Login</Link>
