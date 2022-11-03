@@ -1,42 +1,6 @@
 body {
-    background-color: brown;
+    /* background: #7D5C43;
+        Sienna */
+    background: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 250px;
-    padding: 10px 25px;
-    border: 2px solid lavender;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px #D1D1EA;
-}
-
-.navbar {
-    background-color: grey;
-    display: flex;
-}
-/* 
-.edit-listing {
-
-}
-
-.form-content {
-    
-}
-.header {
-    
-}
-.listing-format {
-    
-}
-.posts-header {
-    
-}
-.reply-btn {
-    
-}
-.title {
-    
-} */
