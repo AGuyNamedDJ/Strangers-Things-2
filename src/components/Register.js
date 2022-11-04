@@ -70,7 +70,7 @@ const Register = () => {
             <br/>
 
             {/* Now lets connect text to .js - Step 5 */}
-                <label> Enter New Username </label>
+                <label> Enter New Username: </label>
 
                 {/* Step 5c - event listener to attach the inputs */}
                 <input type="text" value={username} onChange={updateUsernameState}></input>
@@ -79,13 +79,13 @@ const Register = () => {
                 <br/> 
                 <br/>
 
-                <label> Enter New Password </label>
+                <label> Enter New Password: </label>
                 <input type="password" value={password} onChange={updatePasswordState}></input>
 
                 <br/>
                 <br/>
 
-                <button type="submit">Create Account</button>
+                <button type="submit" >Create Account</button>
             </form>
         </div>
     )
