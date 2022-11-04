@@ -68,7 +68,6 @@ const NewPosts = () => {
         }
     }
 
-
     // User States
         // Title
         function updateTitleState(event) {
