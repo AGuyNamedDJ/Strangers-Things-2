@@ -16,6 +16,7 @@ const Posts = () => {
         else return false;
     }
 
+    // Search Posts
     const filteredPosts = postsData.filter(post => postMatches(post, searchTerm));
     const postsToDisplay = searchTerm.length ? filteredPosts : postsData;
 
