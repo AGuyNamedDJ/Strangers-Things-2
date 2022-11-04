@@ -8,6 +8,8 @@ import AboutUs from './components/AboutUs';
 import EditPosts from './components/EditPosts';
 import LogOut from './components/LogOut';
 import NewPosts from './components/NewPosts';
+import MyMessages from './components/MyMessages';
+import CreateANewPost from './components/CreateANewPost';
 import Index from './components/Index';
 import Profile from './components/Profile';
 import ProfilePostsFormat from './components/ProfilePostsFormat'
@@ -60,16 +62,20 @@ const router = createBrowserRouter([
                 element: <Message />
             },
             {
-                path: "/message",
-                element: <Message />
+                path: "/messageform",
+                element: <MessageForm />
             },
             {
-                path: "messageform",
-                element: <MessageForm />
+                path: "/myMessages",
+                element: <MyMessages />
             },
             {
                 path: "/newposts",
                 element: <NewPosts />
+            },
+            {
+                path: "/createanewpost",
+                element: <CreateANewPost />
             },
             {
                 path: "/settings",

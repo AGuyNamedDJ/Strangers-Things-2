@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useOutletContext, Link } from "react-router-dom";
-import NewPosts from "./NewPosts";
 import PostsFormat from "./PostsFormat";
 
 const Posts = () => {
@@ -29,7 +28,7 @@ const Posts = () => {
                     <label>Search Posts: </label>
                     <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)}></input>
                 </form>
-                { loggedIn ? <button id="new-post-btn"><Link to="/newposts">Create Posts </Link></button> : null }
+                { loggedIn ? <button id="new-post-btn"><Link to="/createanewpost">Create Posts </Link></button> : null }
             </div>
 
             {
