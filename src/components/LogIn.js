@@ -1,21 +1,23 @@
 import React, { useState } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { Link, useNavigate, useOutletContext } from "react-router-dom";
 
 // URL to make template literal
 const apiBaseURL = "https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft";
 
 // Login State
 const Login = () => {
-    const [,, profileData, setProfileData, loggedIn, setLoggedIn] = useOutletContext();
-
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
+    const navigate = useNavigate()
+    const {profileObj: [currentProfile, setCurrentProfile]} = useOutletContext();
+    
     async function formSubmitHandler(event) {
         event.preventDefault();
             // The parameter will not refresh the page, but run the code
 
         try {
+            console.log(username)
+            console.log(password)
             const response = await fetch(`${apiBaseURL}/login`,
                 {
                     method: "POST",
@@ -30,39 +32,37 @@ const Login = () => {
                     })
                 }
             )
-            const data = await response.json();
-            console.log("This is our translated data: ", data);
-            if (data.success) {
-                console.log("successful login");
-                setLoggedIn(data.success);
-                
-                localStorage.setItem("token", data.data.token);
-                fetchUserInfo();
+            const {data} = await response.json();
+
+            if (data.token){
+              localStorage.setItem("token", data.token)
+              navigate('/products');
             }
-        } catch(error) {
-            console.log(error);
+
+        } catch (error) {
+          console.log(error);
         }
-    }
+        if (localStorage.getItem('token')) {
+          async function fetchUserData () {
+              try {
+                  const response = await fetch(`${apiBaseURL}/users/me`, 
+                  {
+                      headers: {
+                          'Content-Type': 'application/json',
+                          'Authorization': `Bearer ${localStorage.getItem('token')}`
+                      },
+                  })
+                  const userData = await response.json();
+                  setCurrentProfile(userData.data)
 
-    async function fetchUserInfo(event) {    
-        try {
-            const response = await fetch(`${apiBaseURL}/user/me`,
-                {
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${localStorage.getItem("token")}`
-                    },
-                })
-                
-            const data = await response.json();
-            console.log("User profile data: ", data.data);
-            setProfileData(data.data);
-
-        } catch(error) {
-            console.log(error);
-        }
-    }
-
+              } catch (error) {
+                  console.log(error)
+              }
+          }
+          fetchUserData();
+      }
+      }
+      
     function updateUsernameState(event) {
         setUsername(event.target.value);
     }
@@ -85,14 +85,14 @@ const Login = () => {
 
 
                 {/* Step 5c - event listener to attach the inputs */}
-                <input type="text" value={username} onChange={(event) => setUsername(event.target.value)}></input>
+                <input type="text" value={username} onChange={updateUsernameState} placeholder="Username"></input>
                     {/* this updates the entered state (new state) to reflect - 5a */}
 
                 <br/>
                 <br/>
 
                 <label>Enter Password </label>
-                <input type="text" value={password} onChange={(event) => setPassword(event.target.value)}></input>
+                <input type="password" value={password} onChange={updatePasswordState} placeholder="Password"></input>
 
                 <br/>
                 <br/>

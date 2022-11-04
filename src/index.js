@@ -44,7 +44,7 @@ const router = createBrowserRouter([
                 element: <LogIn />
             },
             {
-                path: "/logout",
+                path: "/profile/logout",
                 element: <LogOut />
             },
             {
@@ -58,10 +58,6 @@ const router = createBrowserRouter([
             {
                 path: "/postsformat",
                 element: <PostsFormat />
-            },
-            {
-                path: "/login",
-                element: <LogIn />
             },
             {
                 path: "/newposts",
