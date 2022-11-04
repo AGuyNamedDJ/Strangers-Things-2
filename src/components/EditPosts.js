@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useOutletCOntext, useNavigate } from "react-router-dom";
 
 // URL to make template literal
     // I could just save this in an API folder & import it everytime, i'll get to it eventually
@@ -21,7 +21,7 @@ const EditPosts = (props) => {
             // console.log("form event:", event.target.value)
 
             // We want the post id for the specific one we are editing
-            const response = await fetch(`http://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts/${props.indivPost._id}`,
+            const response = await fetch(`${apiBaseURL}/posts/${props.indivPost._id}`,
             {
                 method: "PATCH",
                     // patch means update (think about call of duty patches lol)

@@ -9,6 +9,7 @@ const Register = () => {
     // Lets make state for the submission
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     async function formSubmitHandeler (event) {
         event.preventDefault
@@ -33,13 +34,15 @@ const Register = () => {
 
             // Step -3d; translate promise response to json
             const data = await response.json();
-            console.log("Translated json data", data)
+            // console.log("Translated json data", data)
 
             // Step -3E Local storage; Saving info on the client browser
                 // local.Storage.setItem() - it takes 2 arguments: 'key' & 'the value of that key'
             // Here we are saving the token
-            localStorage.setItem("token", data.data.token)
-
+            if (data.success){
+                localStorage.setItem("token", data.data.token)
+                navigate('/posts');
+            }
         } catch (error) {
             console.log(error);
         }

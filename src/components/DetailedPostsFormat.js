@@ -4,7 +4,7 @@ import EditPosts from "./EditPosts";
 import Message from "./Message";
 import MessageForm from "./MessageForm";
 
-const DetailedPostFormat = () => {
+const DetailedPostsFormat = () => {
     const [posts,, profileData, setProfileData, loggedIn] = useOutletContext();
     const [detailedPost, setDetailedPost] = useState({});
     const [toggleEditForm, setToggleEditForm] = useState(false);
@@ -125,4 +125,4 @@ const DetailedPostFormat = () => {
 
 }
 
-export default DetailedPostFormat;
+export default DetailedPostsFormat;

@@ -38,8 +38,7 @@ const Homepage = () => {
     useEffect(() => {
         async function fetchUserInfo(event) {    
             try {
-                const response = await fetch(
-                    `${apiBaseURL}/users/me`,
+                const response = await fetch(`${apiBaseURL}/users/me`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -61,8 +60,7 @@ const Homepage = () => {
     useEffect(() => {
         async function isLoggedIn(event) {    
             try {
-                const response = await fetch(
-                    `${apiBaseURL}/test/me`,
+                const response = await fetch(`${apiBaseURL}/test/me`,
                     {
                         method: "GET",
                         headers: {

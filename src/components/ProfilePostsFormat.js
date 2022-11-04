@@ -1,7 +1,7 @@
 import React from "react";
 import { useOutletContext, Link } from "react-router-dom"; 
 
-const ProfilePostFormat = (props) => {
+const ProfilePostsFormat = (props) => {
     const postData = props;
   
     return (
@@ -17,6 +17,6 @@ const ProfilePostFormat = (props) => {
     )
 };
 
-export default ProfilePostFormat; 
+export default ProfilePostsFormat; 
 
 // Done

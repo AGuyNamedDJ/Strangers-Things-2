@@ -4,22 +4,27 @@ import {createRoot} from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Import Pages
+import AboutUs from './components/AboutUs';
 import EditPosts from './components/EditPosts';
 import LogOut from './components/LogOut';
-import NewPosts from './components/NewPosts'
+import NewPosts from './components/NewPosts';
+import index from './components/Index';
 import Profile from './components/Profile';
 import ProfilePostsFormat from './components/ProfilePostsFormat'
 import PostsFormat from './components/PostsFormat'
 import LogIn from './components/LogIn';
+import DetailedPostsFormat from './components/DetailedPostsFormat';
 import Register from './components/Register';
 import SearchPosts from './components/SearchPosts'
 import ErrorPage from './components/ErrorPage';
+import Message from './components/Message';
+import MessageForm from './components/MessageForm';
 import Navbar from './components/Navbar';
 import Settings from './components/Settings';
-import AboutUs from './components/AboutUs';
 import Homepage from './components/Homepage';
 import HomepageContent from './components/HomepageContent';
 import Posts from './components/Posts';
+import Index from './components/Index';
 
 const router = createBrowserRouter([
     {
@@ -28,12 +33,16 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             {
-                path: "/settings",
-                element: <Settings />
+                index: true,
+                element: <HomepageContent />
             },
             {
                 path: "/aboutus",
                 element: <AboutUs />
+            },
+            {
+                path: "/posts/:id",
+                element: <DetailedPostsFormat />
             },
             {
                 path: "/editposts",
@@ -48,6 +57,26 @@ const router = createBrowserRouter([
                 element: <LogOut />
             },
             {
+                path: "/message",
+                element: <Message />
+            },
+            {
+                path: "/message",
+                element: <Message />
+            },
+            {
+                path: "messageform",
+                element: <MessageForm />
+            },
+            {
+                path: "/newposts",
+                element: <NewPosts />
+            },
+            {
+                path: "/settings",
+                element: <Settings />
+            },
+            {
                 path: "/homepage",
                 element: <HomepageContent />
             },
@@ -60,10 +89,6 @@ const router = createBrowserRouter([
                 element: <PostsFormat />
             },
             {
-                path: "/newposts",
-                element: <NewPosts />
-            },
-            {
                 path: "/profile",
                 element: <Profile />
             },
@@ -72,7 +97,7 @@ const router = createBrowserRouter([
                 element: <ProfilePostsFormat />
             },
             {
-                path: "/profile/register",
+                path: "/register",
                 element: <Register />
             },
             {

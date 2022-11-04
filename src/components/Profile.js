@@ -2,7 +2,7 @@ import React from "react";
 import { useOutletContext } from "react-router-dom";
 
 import Login from "./LogIn";
-import ProfilePostFormat from "./ProfilePostsFormat";
+import ProfilePostsFormat from "./ProfilePostsFormat";
 import Message from "./Message";
 
 const Profile = () => {
