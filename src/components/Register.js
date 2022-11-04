@@ -41,7 +41,7 @@ const Register = () => {
             // Here we are saving the token
             if (data.success){
                 localStorage.setItem("token", data.data.token)
-                navigate('/posts');
+                navigate('/products');
             }
         } catch (error) {
             console.log(error);

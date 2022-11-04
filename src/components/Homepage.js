@@ -48,6 +48,7 @@ const Homepage = () => {
                     
                 const data = await response.json();
                 setProfileData(data.data);
+                
             } catch(error) {
                 console.log(error);
             }

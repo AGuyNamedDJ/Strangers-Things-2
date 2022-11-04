@@ -97,7 +97,7 @@ const router = createBrowserRouter([
                 element: <ProfilePostsFormat />
             },
             {
-                path: "/register",
+                path: "/profile/register",
                 element: <Register />
             },
             {
