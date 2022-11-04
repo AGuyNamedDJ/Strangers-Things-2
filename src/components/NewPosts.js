@@ -103,7 +103,11 @@ const NewPosts = () => {
                     <label>Location</label>
                     <input type="text" value={location} onChange={updateLocationState}></input>
         
-                    <button type="submit">Create Listing</button>
+                    <label>Willing to Deliver? {"("}Check for yes{")"}</label>
+                    <input type="checkbox" value={willDeliver} onChange={(event) => setWillDeliver(event.target.checked)}></input>
+
+
+                    <button type="submit">POST</button>
                     </div>
                 </form>
             </div>

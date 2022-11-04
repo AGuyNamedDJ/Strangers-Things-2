@@ -8,7 +8,7 @@ import AboutUs from './components/AboutUs';
 import EditPosts from './components/EditPosts';
 import LogOut from './components/LogOut';
 import NewPosts from './components/NewPosts';
-import index from './components/Index';
+import Index from './components/Index';
 import Profile from './components/Profile';
 import ProfilePostsFormat from './components/ProfilePostsFormat'
 import PostsFormat from './components/PostsFormat'
@@ -24,7 +24,6 @@ import Settings from './components/Settings';
 import Homepage from './components/Homepage';
 import HomepageContent from './components/HomepageContent';
 import Posts from './components/Posts';
-import Index from './components/Index';
 
 const router = createBrowserRouter([
     {

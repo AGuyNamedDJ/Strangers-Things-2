@@ -4,13 +4,16 @@ import EditPosts from "./EditPosts";
 import Message from "./Message";
 import MessageForm from "./MessageForm";
 
+// URL to make template literal
+    // I could just save this in an API folder & import it everytime, i'll get to it eventually
+const apiBaseURL = "https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft";
+
 const DetailedPostsFormat = () => {
     const [posts,, profileData, setProfileData, loggedIn] = useOutletContext();
     const [detailedPost, setDetailedPost] = useState({});
     const [toggleEditForm, setToggleEditForm] = useState(false);
     const [toggleMessageForm, setToggleMessageForm] = useState(false);
     const { id } = useParams();
-
     const navigate = useNavigate();
 
     function handleToggleEditForm() {
@@ -26,7 +29,7 @@ const DetailedPostsFormat = () => {
 
         try {
             const response = await fetch(
-                `http://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/posts/${detailedPost._id}`,
+                `${apiBaseURL}/posts/${detailedPost._id}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -38,7 +41,7 @@ const DetailedPostsFormat = () => {
             const data = await response.json();
 
             const userData = await fetch(
-                "https://strangers-things.herokuapp.com/api/2209-ftb-mt-web-ft/users/me",
+                `${apiBaseURL}/users/me`,
                 {
                     headers: {
                         "Content-Type": "application/json",
@@ -83,7 +86,7 @@ const DetailedPostsFormat = () => {
                             <p>{detailedPost.description}</p>
                             <h4>Location: {detailedPost.location}</h4>
                             <h5>Price: {detailedPost.price}</h5>
-                            <h5>Willing to Deliver? {detailedPost.willDeliver ? ("Yes") : ("No")}</h5>
+                            <h5>Willing to Deliver: {detailedPost.willDeliver ? ("Yes") : ("No")}</h5>
                             
                             { loggedIn ?
                                 ( detailedPost.author._id == profileData._id ? 
@@ -110,7 +113,7 @@ const DetailedPostsFormat = () => {
                             {
                                 profileData.messages.length ? profileData.messages.map((msg, idx) => {
                                     return (msg.post._id == detailedPost._id ? <Message key={idx} msg={msg}/> : null)
-                                }) : <p>No messages to display</p>
+                                }) : <p>No essages Available</p>
                             }
                         </div>
 
