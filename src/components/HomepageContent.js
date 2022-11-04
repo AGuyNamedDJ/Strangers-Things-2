@@ -3,7 +3,9 @@ import React from "react";
  const HomepageContent = () => {
      return (
          <div>
-             <p>Welcome Home</p>
+            <p id="welcome">Who needs Amaz-Ebay when you can search through Stranger's Things! </p>
+            <br></br>
+            <p id="welcome">View our Post to Begin Searching! </p>
          </div>
      )
  };
