@@ -132,11 +132,26 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 18%;
-    box-shadow: 20px 20px 50px grey;
+    box-shadow: 20px 20px 50px black;
     border-top: 4px solid rgb(136, 95, 32);
     border-left: 4px solid rgb(136, 95, 32);
     border-bottom: 4px solid rgb(136, 95, 32;
     border-right: 4px solid rgb(136, 95, 32);
     padding-left: 35%;
     
+}
+#homepage-text {
+    font-family: cursive;
+    font-style: oblique;
+    font-size: 48px;
+    color: rgb(136, 95, 32);
+    padding-left: 35px;
+    font-weight: bold;
+    
+}
+#homepage-text2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+    color: rgb(71, 71, 71);
 }
