@@ -21,5 +21,122 @@ body {
 .centered {
     text-align: center;
 }
-/* 
-welcome
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-top: 2px solid rgb(136, 95, 32);
+    border-left: 2px solid rgb(136, 95, 32);
+    border-bottom: 2px solid rgb(136, 95, 32);
+    border-right: 2px solid rgb(136, 95, 32);
+    column-count: 4;
+    column-gap: 30px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 10px 10px 10px rgb(68, 67, 67);
+}
+
+#navbar-text {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+
+#navbar-text {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+
+#navbar-text:visited {
+    color: rgb(158, 47, 158);
+}
+
+#navbar-text:hover {
+    background-color: rgb(158, 130, 89);
+}
+
+#navbar-text:active {
+    color: rgb(158, 130, 89);
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
+    border-top: 4px solid rgb(136, 95, 32);
+    border-left: 4px solid rgb(136, 95, 32);
+    border-bottom: 4px solid rgb(136, 95, 32);
+    border-right: 4px solid rgb(136, 95, 32);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#login {
+    display: flex;
+    box-shadow: 10px 10px 30px rgb(68, 67, 67);
+    padding-left: 0px;
+    padding-right: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    color: rgb(136, 95, 32);
+}
+#login2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 10px 10px 30px rgb(68, 67, 67);
+    padding-left: 0px;
+    padding-right: 20px;
+    padding: 20px;
+}
+#login-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+
+}
+#login-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: rgb(136, 95, 32); 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+
+}
+#post-preview {
+    justify-content: center;
+    border: 2px solid rgb(136, 95, 32);
+    margin-top: 5%;
+    opacity: 5;
+}
+#submit {
+    align-items: center;
+    justify-content: center;
+}
+
+#homepage-containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18%;
+    box-shadow: 20px 20px 50px grey;
+    border-top: 4px solid rgb(136, 95, 32);
+    border-left: 4px solid rgb(136, 95, 32);
+    border-bottom: 4px solid rgb(136, 95, 32;
+    border-right: 4px solid rgb(136, 95, 32);
+    padding-left: 35%;
+    
+}

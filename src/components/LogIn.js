@@ -65,19 +65,20 @@ const LogIn = () => {
 
 
     return (
-        <div>
+        <div id="login-form">
+            <h1 id="login">Login</h1>
             <form onSubmit={formSubmitHandler} className="login-form">
-                <label>Enter Username: </label>
+                <label id="login-text">Enter Username: </label>
                 <input type="text" value={username} onChange={(event) => setUsername(event.target.value)}></input>
 
                 <br/>
 
-                <label>Enter Password: </label>
+                <label id="login-text">Enter Password: </label>
                 <input type="text" value={password} onChange={(event) => setPassword(event.target.value)}></input>
 
                 <br/>
 
-                <button type="submit">Login</button>
+                <button type="submit" id="login-button">Login</button>
             </form>
             <div className="centered">
                 <Link to="/profile/register">Click Here to Register for an Account!</Link>

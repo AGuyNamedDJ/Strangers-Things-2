@@ -62,7 +62,7 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div id="login-form">
             <h3>Register For Account</h3>
             {/* Now we need to attach a callback fn to the form ele - Step 4*/}
             <form onSubmit={formSubmitHandeler}>
@@ -70,7 +70,7 @@ const Register = () => {
             <br/>
 
             {/* Now lets connect text to .js - Step 5 */}
-                <label> Enter New Username: </label>
+                <label id="login-text"> Enter New Username: </label>
 
                 {/* Step 5c - event listener to attach the inputs */}
                 <input type="text" value={username} onChange={updateUsernameState}></input>
@@ -79,7 +79,7 @@ const Register = () => {
                 <br/> 
                 <br/>
 
-                <label> Enter New Password: </label>
+                <label id="login-text"> Enter New Password: </label>
                 <input type="password" value={password} onChange={updatePasswordState}></input>
 
                 <br/>

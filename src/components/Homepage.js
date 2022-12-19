@@ -83,7 +83,7 @@ const Homepage = () => {
     return (
         <div>
             <div id="header">
-                <h1 id="title">Stranger's Things</h1>
+                {/* <h1 id="title">Stranger's Things</h1> */}
                 <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
             </div>
 

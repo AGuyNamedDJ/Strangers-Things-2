@@ -2,11 +2,11 @@ import React from "react";
 
  const HomepageContent = () => {
      return (
-         <div>
-            <p id="welcome">Who needs Amaz-Ebay when you can search through Stranger's Things! </p>
-            <br></br>
-            <p id="welcome">View our Post to Begin Searching! </p>
-         </div>
+        <div id="homepage-containter">
+            <h1 id="homepage-text">Welcome To</h1>
+            <h1 id="homepage-text">STRANGER'S THINGS</h1>
+            <p id="homepage-text2">Please login or register if not yet a user</p>
+        </div>
      )
  };
 
